@@ -15,14 +15,11 @@ const StickyLogo = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Calculate sizes:
-  // Desktop: Normal = 152px (w-38 h-38), Scrolled = same
-  // Mobile: Normal = 64px (50% of 128px), Scrolled = 48px (75% of 64px)
   const getSizeClasses = () => {
     if (isScrolled) {
-      return 'w-12 h-12 md:w-38 md:h-38' // Mobile: 48px, Desktop: 152px
+      return 'w-12 h-auto md:w-16 md:h-auto' // Mobile: 48px width, Desktop: 64px width
     }
-    return 'w-16 h-16 md:w-38 md:h-38' // Mobile: 64px, Desktop: 152px
+    return 'w-16 h-auto md:w-[130px] md:h-auto' // Mobile: 64px width, Desktop: 130px width (50% of 260px)
   }
 
   return (
@@ -35,16 +32,15 @@ const StickyLogo = () => {
             window.location.href = '/'
           }
         }}
-        className={`block relative transition-all duration-300 ease-in-out ${getSizeClasses()}`}
+        className={`block transition-all duration-300 ease-in-out ${getSizeClasses()}`}
       >
-        <div className="absolute inset-0 rounded-full overflow-hidden">
-          <Image
-            src="/images/logo-spencer-toogood-mono.png"
-            alt="Spencer Toogood"
-            fill
-            className="object-cover"
-          />
-        </div>
+        <Image
+          src="/images/logo-osss.svg"
+          alt="Osss Performance"
+          width={260}
+          height={91}
+          className="w-full h-auto"
+        />
       </button>
     </div>
   )

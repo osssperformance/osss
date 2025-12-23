@@ -103,7 +103,7 @@ const BlogPreview = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-st-navy mb-8">
-              LATEST ARTICLES
+              Latest Blogs
             </h2>
             <p className="text-xl text-st-gray-400 max-w-3xl mx-auto leading-relaxed">
               Thoughts on AI, Automation, Advertising, Apps, and the Future of Digital Business.
@@ -185,11 +185,17 @@ const BlogPreview = () => {
                 </div>
               </div>
 
-              <div className={`text-center transition-all duration-1000 delay-600 ${
+              <div className={`text-center mt-32 transition-all duration-1000 delay-800 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}>
+                <div className="mb-8">
+                  <span className="text-st-gray-400 text-lg">
+                    Want to read more insights and guides?
+                  </span>
+                </div>
+
                 <Link href="/blog">
-                  <button 
+                  <button
                     onClick={() => {
                       // Track view all blog posts CTA click
                       if (typeof window !== 'undefined' && window.OmniWolf) {
@@ -200,9 +206,17 @@ const BlogPreview = () => {
                         })
                       }
                     }}
-                    className="border-2 border-st-navy text-st-navy px-8 py-4 rounded-full hover:bg-st-navy hover:text-white transition-all duration-300 transform hover:scale-105 font-semibold"
+                    className="group bg-st-navy text-white px-12 py-6 rounded-full hover:bg-st-cyan hover:text-st-navy transition-all duration-300 transform hover:scale-105 font-semibold text-lg inline-flex items-center gap-3"
                   >
-                    View All Posts
+                    <span>View All Posts</span>
+                    <svg
+                      className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                   </button>
                 </Link>
               </div>

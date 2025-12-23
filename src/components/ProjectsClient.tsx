@@ -71,9 +71,8 @@ const ProjectsClient = ({ projects }: ProjectsClientProps) => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <div className="text-center mb-8">
-              <p className="text-st-gray-400 text-sm mb-2">from 2020 &apos;til today</p>
               <h2 className="text-4xl md:text-5xl font-black text-st-navy">
-                MY LATEST WORK
+                Latest Work
               </h2>
             </div>
           </div>

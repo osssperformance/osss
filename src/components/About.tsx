@@ -49,10 +49,10 @@ const About = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-st-navy mb-8">
-              What I do.
+              What we do.
             </h2>
             <p className="text-xl text-st-gray-400 max-w-3xl mx-auto leading-relaxed">
-              With over a decade of experience in digital transformation, I specialize in creating 
+              With over a decade of experience in digital transformation, Osss Performance specialises in creating 
               intelligent solutions that bridge the gap between human creativity and machine efficiency.
             </p>
           </div>

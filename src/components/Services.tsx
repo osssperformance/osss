@@ -56,7 +56,7 @@ const Services = () => {
           }`}>
             <p className="text-st-gray-400 text-lg mb-4">Services</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-st-navy mb-8">
-              HOW I CAN HELP
+              HOW WE HELP SMALL BUSINESS
             </h2>
             <p className="text-xl text-st-gray-400 max-w-3xl mx-auto leading-relaxed">
               Comprehensive solutions designed to accelerate your business growth through intelligent technology.
